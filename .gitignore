@@ -9,7 +9,6 @@ __pycache__/
 *$py.class
 
 # Datos (Si tus CSVs son muy pesados, mejor no subirlos)
-*.csv
 *.xlsx
 *.parquet
 
@@ -24,3 +23,4 @@ __pycache__/
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
