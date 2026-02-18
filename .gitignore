@@ -1,0 +1,26 @@
+# Entornos virtuales (Evita subir megabytes de librerías)
+venv/
+env/
+.env
+
+# Python (Archivos temporales)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Datos (Si tus CSVs son muy pesados, mejor no subirlos)
+*.csv
+*.xlsx
+*.parquet
+
+# Modelos (Para no subir archivos .pkl o .h5 pesados)
+*.pkl
+*.joblib
+*.h5
+
+# Jupyter Notebooks (Puntos de control)
+.ipynb_checkpoints/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
