@@ -1,4 +1,4 @@
-﻿# Churn prediction and actionable insights for Telecommunications Industry 
+# Churn prediction and actionable insights for Telecommunications Industry 
 
 
 
@@ -92,7 +92,7 @@ After parameter tunning:
 
 ### 💰 6. Business Impact
 
-Under the assumptions of a 50% gross margin, targeting groups of customers rather than individuals, and assuming homogeneous response to the campaign, three scenarios were considered across two campaigns with a cost of 20 **USD** per customer. Acting on the top 30% of customers with the highest churn probability, we project a net profit of 21,116 USD, with an ROI of 50%, effectively preventing the churn of 124 customers in a neutral scenario
+Under the assumptions of a 50% gross margin, targeting groups of customers rather than individuals, and assuming homogeneous response to the campaign, three scenarios were considered across two campaigns with a cost of 20 **USD** per customer. Acting on the optimal target, we project a net profit of 32,977 USD, with an ROI of 0.62, effectively preventing the churn of 145 customers in a neutral scenario
 
 ----------
 
