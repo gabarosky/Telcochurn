@@ -1,6 +1,6 @@
 # Churn prediction and actionable insights for Telecommunications Industry 
 
-
+*Maintained by [Gabriel Carrizo](https://www.linkedin.com/in/carrizogabriel/)*
 
 
 ### 🧠 1. Business Problem
@@ -43,7 +43,7 @@ In this project, we analyzed the key drivers of customer churn, identified the m
 
 
 ----------
-### 📁 3. Project Structure
+### 📁 4. Project Structure
 
 ```
 Telcochurn/
@@ -55,17 +55,17 @@ Telcochurn/
 │   └── churn.ipynb        # EDA, Model Selection, Training & Fitting, Evaluation, Lift Analysis & Business Analysis
 │
 ├── 📂 outputs/      
-│   ├── target_list_churn.cvs     # Customer's list for each target
-│   ├── target_list_roi_optimized.cvs
-│   ├── target_list_top10_risk.cvs
-│   └── target_list_top30_risk.cvs
+│   ├── target_list_churn.csv     # Customer's list for each target
+│   ├── target_list_roi_optimized.csv
+│   ├── target_list_top10_risk.csv
+│   └── target_list_top30_risk.csv
 │
 ├── requirements.txt
 ├── environment.yml
 └── README.md
 ```
 ----------
-### ⚙️ 4. Stack
+### ⚙️ 5. Stack
 **Environment:** Jupyter Notebook · Python 3
 
 -   **Data manipulation:** pandas, NumPy, SciPy
@@ -77,7 +77,7 @@ Telcochurn/
     -   Metrics: AUC-ROC, F1, Recall, Precision
 
 ----------
-### 📈 5. Results
+### 📈 6. Results
 
 Through a cross validation the metrics obtained were
 | Model               | Accuracy | Precission | Recall   | F1       | AUC      |   |
@@ -97,13 +97,13 @@ After parameter tunning:
 
 ----------
 
-### 💰 6. Business Impact
+### 💰 7. Business Impact
 
 Under the assumptions of a 50% gross margin, targeting groups of customers rather than individuals, and assuming homogeneous response to the campaign, three scenarios were considered across two campaigns with a cost of 20 **USD** per customer. Acting on the optimal target, we project a net profit of 32,977 USD, with an ROI of 0.62, effectively preventing the churn of 145 customers in a neutral scenario
 
 ----------
 
-### 🔎 7. Key Insights
+### 🔎 8. Key Insights
 
 1.  **Churn risk is highly concentrated.**  
     The top decile of customers is 2.8x more likely to churn compared to random selection, enabling efficient targeting.
@@ -119,7 +119,7 @@ Under the assumptions of a 50% gross margin, targeting groups of customers rathe
     Under neutral and optimistic scenarios, the 30% targeting strategy generates materially higher ROI while maintaining manageable downside risk.
 
 ----------
-### 🚀 8. How to Run
+### 🚀 9. How to Run
 
 **Option A: Using Conda**
 
