@@ -54,7 +54,14 @@ Telcochurn/
 ├── 📂 notebooks/                 
 │   └── churn.ipynb        # EDA, Model Selection, Training & Fitting, Evaluation, Lift Analysis & Business Analysis
 │
+├── 📂 outputs/      
+│   ├── target_list_churn.cvs     # Customer's list for each target
+│   ├── target_list_roi_optimized.cvs
+│   ├── target_list_top10_risk.cvs
+│   └── target_list_top30_risk.cvs
+│
 ├── requirements.txt
+├── environment.yml
 └── README.md
 ```
 ----------
@@ -114,9 +121,23 @@ Under the assumptions of a 50% gross margin, targeting groups of customers rathe
 ----------
 ### 🚀 8. How to Run
 
-bash
+**Option A: Using Conda**
 
 ```bash
+# Clone the repository
+git clone https://github.com/gabarosky/Telcochurn.git
+cd Telcochurn
+
+# Create and activate the environment
+conda env create -f environment.yml
+conda activate ml
+
+# Launch Jupyter
+jupyter notebook notebooks/churn.ipynb
+```
+
+**Option B: Using Pip**
+```bash 
 # Clone the repository
 git clone https://github.com/gabarosky/Telcochurn.git
 cd Telcochurn
