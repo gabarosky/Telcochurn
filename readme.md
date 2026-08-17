@@ -119,7 +119,42 @@ Under the assumptions of a 50% gross margin, targeting groups of customers rathe
     Under neutral and optimistic scenarios, the 30% targeting strategy generates materially higher ROI while maintaining manageable downside risk.
 
 ----------
-### 🚀 9. How to Run
+## 🧪 MLOps & Experiment Tracking with MLflow
+
+To systematically track, compare, and reproduce model iterations, **MLflow** was integrated into the training pipeline.
+
+### 🎯 Implementation Details
+The MLflow tracking setup executes the following steps for each evaluated model within the experiment:
+
+- **Hyperparameter Logging:** Automatically captures hyperparameter configurations for each classifier (`mlflow.log_params`).
+- **Train vs. Test Metric Tracking:** Logs Accuracy, Precision, Recall, F1-Score, and ROC-AUC for both training and test sets to evaluate potential overfitting (`mlflow.log_metric`).
+- **Model Artifact Logging:** Saves the fitted scikit-learn pipeline/model artifacts for future deployment (`mlflow.sklearn.log_model`).
+- **Custom Visual Artifacts:** Generates and logs custom evaluation plots, such as the Precision-Recall threshold trade-off curve (`mlflow.log_artifact`).
+
+---
+
+### 🛠️ How to View Logged Experiments
+**Launch the MLflow User Interface:**
+   ```bash
+   mlflow ui
+   ```
+Access the Dashboard:
+Open http://127.0.0.1:5000 in your web browser to compare runs, inspect metric logs across models, and view attached plot artifacts.
+
+Load a Saved Model Run:
+```python
+import mlflow.sklearn
+
+# Load a logged model artifact using its Run ID
+model_uri = "runs:/<RUN_ID>/model"
+loaded_model = mlflow.sklearn.load_model(model_uri)
+
+# Predict on new data
+predictions = loaded_model.predict(X_test)
+```
+
+---
+### 🚀 10. How to Run
 
 **Option A: Using Conda**
 
