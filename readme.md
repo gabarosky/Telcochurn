@@ -3,7 +3,7 @@
 *Maintained by [Gabriel Carrizo](https://www.linkedin.com/in/carrizogabriel/)*
 
 
-### 🧠 1. Business Problem
+## 🧠 1. Business Problem
 
 In telecom companies, customer retention is more cost-effective than customer acquisition. Therefore, predicting churn and understanding its causes is critical for a company's growth.
 
@@ -11,7 +11,7 @@ In this project, we analyzed the key drivers of customer churn, identified the m
 
 ----------
 
-### 📊 2. Dataset
+## 📊 2. Dataset
 
 -   [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) from [Kaggle](www.kaggle.com).
     
@@ -24,7 +24,7 @@ In this project, we analyzed the key drivers of customer churn, identified the m
 
 ---
 
-### 🛠 3. Methodology
+## 🛠 3. Methodology
 
 - Data overview and cleaning  
 - EDA    
@@ -43,7 +43,7 @@ In this project, we analyzed the key drivers of customer churn, identified the m
 
 
 ----------
-### 📁 4. Project Structure
+## 📁 4. Project Structure
 
 ```
 Telcochurn/
@@ -65,7 +65,7 @@ Telcochurn/
 └── README.md
 ```
 ----------
-### ⚙️ 5. Stack
+## ⚙️ 5. Stack
 **Environment:** Jupyter Notebook · Python 3
 
 -   **Data manipulation:** pandas, NumPy, SciPy
@@ -77,7 +77,7 @@ Telcochurn/
     -   Metrics: AUC-ROC, F1, Recall, Precision
 
 ----------
-### 📈 6. Results
+## 📈 6. Results
 
 Through a cross validation the metrics obtained were
 | Model               | Accuracy | Precission | Recall   | F1       | AUC      |   |
@@ -97,13 +97,13 @@ After parameter tunning:
 
 ----------
 
-### 💰 7. Business Impact
+## 💰 7. Business Impact
 
 Under the assumptions of a 50% gross margin, targeting groups of customers rather than individuals, and assuming homogeneous response to the campaign, three scenarios were considered across two campaigns with a cost of 20 **USD** per customer. Acting on the optimal target, we project a net profit of 32,977 USD, with an ROI of 0.62, effectively preventing the churn of 145 customers in a neutral scenario
 
 ----------
 
-### 🔎 8. Key Insights
+## 🔎 8. Key Insights
 
 1.  **Churn risk is highly concentrated.**  
     The top decile of customers is 2.8x more likely to churn compared to random selection, enabling efficient targeting.
@@ -119,7 +119,7 @@ Under the assumptions of a 50% gross margin, targeting groups of customers rathe
     Under neutral and optimistic scenarios, the 30% targeting strategy generates materially higher ROI while maintaining manageable downside risk.
 
 ----------
-## 🧪 MLOps & Experiment Tracking with MLflow
+## 🧪 9. MLOps & Experiment Tracking with MLflow
 
 To systematically track, compare, and reproduce model iterations, **MLflow** was integrated into the training pipeline.
 
@@ -154,7 +154,7 @@ predictions = loaded_model.predict(X_test)
 ```
 
 ---
-### 🚀 10. How to Run
+## 🚀 10. How to Run
 
 **Option A: Using Conda**
 
