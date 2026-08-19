@@ -203,7 +203,7 @@ pip install -r requirements.txt
 jupyter notebook notebooks/churn.ipynb
 ```
 
-**Recommended:** Python 3.11+` 
+**Recommended:** Python 3.11+ 
 
 ---
 ### 🚀 11. Scalability & Potential Extensions
