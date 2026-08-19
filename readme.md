@@ -178,7 +178,7 @@ predictions = loaded_model.predict(X_test)
 **Option A: Using Conda**
 
 ```bash
-# Clone the repository
+# Clone the repository 
 git clone https://github.com/gabarosky/Telcochurn.git
 cd Telcochurn
 
