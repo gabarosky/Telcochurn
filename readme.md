@@ -49,16 +49,19 @@ In this project, we analyzed the key drivers of customer churn, identified the m
 Telcochurn/
 │
 ├── 📂 data/
-│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv  # original dataset
-│
+│   ├── 📂 raw/
+│   │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv  
+│   └── 📂 outputs/
+│       ├── target_list_churn.csv
+│       ├── target_list_roi_optimized.csv
+│       ├── target_list_top10_risk.csv
+│       └──target_list_top30_risk.csv
+├── 📂 docs/
+│   └── 📂 img/
+│       ├── logistic_regression_coefficients.png
+│       └── shap_waterfall_example.png
 ├── 📂 notebooks/                 
-│   └── churn.ipynb        # EDA, Model Selection, Training & Fitting, Evaluation, Lift Analysis & Business Analysis
-│
-├── 📂 outputs/      
-│   ├── target_list_churn.csv     # Customer's list for each target
-│   ├── target_list_roi_optimized.csv
-│   ├── target_list_top10_risk.csv
-│   └── target_list_top30_risk.csv
+│   └── churn.ipynb        
 │
 ├── requirements.txt
 ├── environment.yml
@@ -95,6 +98,20 @@ After parameter tunning:
 -   Lift (10%):  2.8x
 -   Lift (30%):  2.2x   
 
+### 🔍 Model Explainability & Feature Drivers
+
+Model explainability was approached at both global and local levels to ensure transparency and strategic utility.
+
+* **Global Level (Logistic Regression Coefficients):** Evaluates overall population trends. High-risk predictors include Fiber Optic service, higher Total Charges, and streaming VAS subscriptions. Conversely, long-term contracts (One/Two Year) and low-complexity setups ("Telephone-only") serve as primary retention anchors.
+
+![Logistic Regression Coefficients](docs/img/logistic_regression_coefficients.png)
+*Figure: Global feature importance based on Logistic Regression coefficients ($\beta$).*
+
+* **Local Level (SHAP Waterfall Plots):** Provides individual-level diagnostics by breaking down how specific feature values push or pull a given customer's churn risk away from the baseline average.
+
+![SHAP Waterfall Example](docs/img/shap_waterfall_example.png)
+*Figure: SHAP Waterfall Plot for a High-Risk customer (93.9% Churn Prob), highlighting feature contributions for individual diagnosis.*
+
 ----------
 
 ## 💰 7. Business Impact
@@ -117,6 +134,8 @@ Under the assumptions of a 50% gross margin, targeting groups of customers rathe
     -   Expanding the campaign to the top 30% (deciles 8–10) reduces the breakeven threshold to 6.66% and substantially increases upside potential.
 4.  **Risk-return profile favors broader targeting.**  
     Under neutral and optimistic scenarios, the 30% targeting strategy generates materially higher ROI while maintaining manageable downside risk.
+5. **Explainability enables tailored interventions.** 
+Global coefficients outline general population trends, while SHAP waterfall plots diagnose individual risk drivers (e.g., billing vs. service friction), ensuring retention offers match customer-specific root causes. 
 
 ----------
 ## 🧪 9. MLOps & Experiment Tracking with MLflow
@@ -186,7 +205,11 @@ jupyter notebook notebooks/churn.ipynb
 
 **Recommended:** Python 3.11+` 
 
+---
+### 🚀 11. Scalability & Potential Extensions
 
+* **Interactive Retention Interface:** The model pipeline and SHAP explainer can be wrapped into a Streamlit application, allowing non-technical marketing teams to visually inspect customer risk profiles in real time.
+* **CRM API Integration:** The system supports deployment via a lightweight REST API (e.g., FastAPI) to deliver real-time churn scores and primary risk drivers directly into external CRM or support platforms.
 ----------
 
 Made by [Gabriel Carrizo](https://www.linkedin.com/in/carrizogabriel/) · MIT License
